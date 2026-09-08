@@ -15,22 +15,22 @@ type Field = { label: string; value: string; mono?: string; span: string };
 const fieldsFor: Record<SearchMode, { fields: Field[]; footnote: React.ReactNode }> = {
   flights: {
     fields: [
-      { label: "From", value: "London · ", mono: "LHR", span: "md:col-span-3" },
-      { label: "To", value: "Tokyo · ", mono: "HND", span: "md:col-span-3" },
+      { label: "From", value: "Delhi · ", mono: "DEL", span: "md:col-span-3" },
+      { label: "To", value: "Jaipur · ", mono: "JAI", span: "md:col-span-3" },
       { label: "Depart", value: "14 Mar", span: "md:col-span-2" },
-      { label: "Return", value: "28 Mar", span: "md:col-span-2" },
-      { label: "Cab", value: "Eco", span: "md:col-span-1" },
+      { label: "Return", value: "18 Mar", span: "md:col-span-2" },
+      { label: "Cabin", value: "Eco", span: "md:col-span-1" },
     ],
     footnote: (
       <>
-        2 adults · Economy · 1 checked bag · from{" "}
-        <span className="text-accent-ink font-medium">£1,284</span>
+        2 adults · Economy · 1 check-in bag · from{" "}
+        <span className="text-accent-ink font-medium">₹2,480</span>
       </>
     ),
   },
   hotels: {
     fields: [
-      { label: "City", value: "Lisbon · ", mono: "LIS", span: "md:col-span-3" },
+      { label: "City", value: "Kochi · ", mono: "COK", span: "md:col-span-3" },
       { label: "Property", value: "Any · ", mono: "4★+", span: "md:col-span-3" },
       { label: "Check in", value: "14 Mar", span: "md:col-span-2" },
       { label: "Check out", value: "18 Mar", span: "md:col-span-2" },
@@ -39,37 +39,37 @@ const fieldsFor: Record<SearchMode, { fields: Field[]; footnote: React.ReactNode
     footnote: (
       <>
         2 guests · 1 room · breakfast optional · from{" "}
-        <span className="text-accent-ink font-medium">£96/nt</span>
+        <span className="text-accent-ink font-medium">₹1,850/nt</span>
       </>
     ),
   },
   trains: {
     fields: [
-      { label: "From", value: "London · ", mono: "STP", span: "md:col-span-3" },
-      { label: "To", value: "Paris · ", mono: "PNO", span: "md:col-span-3" },
+      { label: "From", value: "New Delhi · ", mono: "NDLS", span: "md:col-span-3" },
+      { label: "To", value: "Agra Cantt · ", mono: "AGC", span: "md:col-span-3" },
       { label: "Outbound", value: "14 Mar", span: "md:col-span-2" },
       { label: "Return", value: "16 Mar", span: "md:col-span-2" },
-      { label: "Class", value: "Std", span: "md:col-span-1" },
+      { label: "Class", value: "CC", span: "md:col-span-1" },
     ],
     footnote: (
       <>
-        1 adult · Standard · seat reservation incl · from{" "}
-        <span className="text-accent-ink font-medium">£58</span>
+        1 adult · Vande Bharat chair car · seat included · from{" "}
+        <span className="text-accent-ink font-medium">₹560</span>
       </>
     ),
   },
   packages: {
     fields: [
-      { label: "From", value: "London · ", mono: "LHR", span: "md:col-span-3" },
-      { label: "Going to", value: "Bali · ", mono: "DPS", span: "md:col-span-3" },
+      { label: "From", value: "Delhi · ", mono: "DEL", span: "md:col-span-3" },
+      { label: "Going to", value: "Goa · ", mono: "GOI", span: "md:col-span-3" },
       { label: "Start", value: "02 Apr", span: "md:col-span-2" },
-      { label: "Nights", value: "9", span: "md:col-span-2" },
+      { label: "Nights", value: "5", span: "md:col-span-2" },
       { label: "Board", value: "B&B", span: "md:col-span-1" },
     ],
     footnote: (
       <>
-        2 adults · flights + villa + transfers · from{" "}
-        <span className="text-accent-ink font-medium">£1,118</span>
+        2 adults · flights + resort + transfers · from{" "}
+        <span className="text-accent-ink font-medium">₹18,400</span>
       </>
     ),
   },

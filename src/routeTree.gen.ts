@@ -14,6 +14,7 @@ import { Route as DealsRouteImport } from './routes/deals'
 import { Route as FlightsRouteImport } from './routes/flights'
 import { Route as HotelsRouteImport } from './routes/hotels'
 import { Route as PackagesRouteImport } from './routes/packages'
+import { Route as PlannerRouteImport } from './routes/planner'
 import { Route as SupportRouteImport } from './routes/support'
 import { Route as TrainsRouteImport } from './routes/trains'
 import { Route as TripsRouteImport } from './routes/trips'
@@ -43,6 +44,11 @@ const PackagesRoute = PackagesRouteImport.update({
   path: '/packages',
   getParentRoute: () => rootRouteImport,
 } as any)
+const PlannerRoute = PlannerRouteImport.update({
+  id: '/planner',
+  path: '/planner',
+  getParentRoute: () => rootRouteImport,
+} as any)
 const SupportRoute = SupportRouteImport.update({
   id: '/support',
   path: '/support',
@@ -65,6 +71,7 @@ export interface FileRoutesByFullPath {
   '/flights': typeof FlightsRoute
   '/hotels': typeof HotelsRoute
   '/packages': typeof PackagesRoute
+  '/planner': typeof PlannerRoute
   '/support': typeof SupportRoute
   '/trains': typeof TrainsRoute
   '/trips': typeof TripsRoute
@@ -75,6 +82,7 @@ export interface FileRoutesByTo {
   '/flights': typeof FlightsRoute
   '/hotels': typeof HotelsRoute
   '/packages': typeof PackagesRoute
+  '/planner': typeof PlannerRoute
   '/support': typeof SupportRoute
   '/trains': typeof TrainsRoute
   '/trips': typeof TripsRoute
@@ -86,6 +94,7 @@ export interface FileRoutesById {
   '/flights': typeof FlightsRoute
   '/hotels': typeof HotelsRoute
   '/packages': typeof PackagesRoute
+  '/planner': typeof PlannerRoute
   '/support': typeof SupportRoute
   '/trains': typeof TrainsRoute
   '/trips': typeof TripsRoute
@@ -98,6 +107,7 @@ export interface FileRouteTypes {
     | '/flights'
     | '/hotels'
     | '/packages'
+    | '/planner'
     | '/support'
     | '/trains'
     | '/trips'
@@ -108,6 +118,7 @@ export interface FileRouteTypes {
     | '/flights'
     | '/hotels'
     | '/packages'
+    | '/planner'
     | '/support'
     | '/trains'
     | '/trips'
@@ -118,6 +129,7 @@ export interface FileRouteTypes {
     | '/flights'
     | '/hotels'
     | '/packages'
+    | '/planner'
     | '/support'
     | '/trains'
     | '/trips'
@@ -129,6 +141,7 @@ export interface RootRouteChildren {
   FlightsRoute: typeof FlightsRoute
   HotelsRoute: typeof HotelsRoute
   PackagesRoute: typeof PackagesRoute
+  PlannerRoute: typeof PlannerRoute
   SupportRoute: typeof SupportRoute
   TrainsRoute: typeof TrainsRoute
   TripsRoute: typeof TripsRoute
@@ -171,6 +184,13 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof PackagesRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/planner': {
+      id: '/planner'
+      path: '/planner'
+      fullPath: '/planner'
+      preLoaderRoute: typeof PlannerRouteImport
+      parentRoute: typeof rootRouteImport
+    }
     '/support': {
       id: '/support'
       path: '/support'
@@ -201,6 +221,7 @@ const rootRouteChildren: RootRouteChildren = {
   FlightsRoute: FlightsRoute,
   HotelsRoute: HotelsRoute,
   PackagesRoute: PackagesRoute,
+  PlannerRoute: PlannerRoute,
   SupportRoute: SupportRoute,
   TrainsRoute: TrainsRoute,
   TripsRoute: TripsRoute,

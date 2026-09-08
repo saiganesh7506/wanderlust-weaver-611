@@ -3,6 +3,7 @@ import { Logo } from "./Logo";
 
 const links = [
   { to: "/", label: "Book" },
+  { to: "/planner", label: "AI Trip Planner" },
   { to: "/deals", label: "Deals" },
   { to: "/trips", label: "Trips" },
   { to: "/support", label: "Support" },

@@ -8,7 +8,7 @@ export const Route = createFileRoute("/deals")({
       {
         name: "description",
         content:
-          "Live TravelX deals: discounted flights, hotel nights, rail fares and packages with codes you can apply at checkout.",
+          "Live TravelX India deals: discounted domestic flights, hotel nights, rail fares and packages with codes you can apply at checkout.",
       },
       { property: "og:title", content: "Deals and fare codes — TravelX" },
       {

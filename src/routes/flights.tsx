@@ -9,12 +9,12 @@ export const Route = createFileRoute("/flights")({
       {
         name: "description",
         content:
-          "Search return and one-way flights on TravelX. Compare fares, cabins and durations across 12,400+ routes with no booking fees.",
+          "Search domestic flights across India on TravelX. Compare fares, cabins and durations across 1,900+ domestic Indian routes with no booking fees.",
       },
       { property: "og:title", content: "Flight search — TravelX" },
       {
         property: "og:description",
-        content: "Compare fares, cabins and durations across 12,400+ routes.",
+        content: "Compare fares, cabins and durations on 1,900+ Indian routes.",
       },
     ],
   }),
@@ -22,11 +22,11 @@ export const Route = createFileRoute("/flights")({
 });
 
 const fares = [
-  { route: "LHR → HND", detail: "14 Mar · 12h 40m · direct", operator: "Skybridge 041", price: "£1,284" },
-  { route: "LHR → LIS", detail: "14 Mar · 2h 35m · direct", operator: "Atlantic Blue 220", price: "£214" },
-  { route: "LHR → NAP", detail: "16 Mar · 2h 15m · direct", operator: "Meridian 118", price: "£189" },
-  { route: "LHR → ATH", detail: "18 Mar · 3h 20m · direct", operator: "Aegean Line 77", price: "£246" },
-  { route: "LHR → DPS", detail: "02 Apr · 15h 05m · 1 stop", operator: "Skybridge 902", price: "£1,118" },
+  { route: "DEL → JAI", detail: "14 Mar · 1h 05m · direct", operator: "Aravalli Air 041", price: "₹2,480" },
+  { route: "BOM → COK", detail: "14 Mar · 1h 50m · direct", operator: "Coastline 220", price: "₹3,940" },
+  { route: "DEL → GOI", detail: "16 Mar · 2h 35m · direct", operator: "Konkan Wings 118", price: "₹4,260" },
+  { route: "BLR → VNS", detail: "18 Mar · 2h 45m · 1 stop", operator: "Ganga Air 77", price: "₹4,610" },
+  { route: "BOM → UDR", detail: "02 Apr · 1h 30m · direct", operator: "Aravalli Air 902", price: "₹3,180" },
 ];
 
 function FlightsPage() {

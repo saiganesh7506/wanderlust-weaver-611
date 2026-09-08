@@ -23,11 +23,11 @@ export const Route = createFileRoute("/support")({
 const faqs = [
   {
     q: "Can I change a booked flight?",
-    a: "Most economy fares can be moved to another date for the fare difference plus the airline's change charge. Flexible fares change free up to 2 hours before departure.",
+    a: "Most economy fares on domestic Indian routes can be moved to another date for the fare difference plus the airline's change charge. Flexible fares change free up to 2 hours before departure.",
   },
   {
     q: "How fast are refunds?",
-    a: "Refundable tickets are returned to the original card within 5 working days of approval. Rail refunds usually clear the next working day.",
+    a: "Refundable tickets are returned to the original card within 5 working days of approval. Indian Railways refunds usually clear the next working day.",
   },
   {
     q: "What baggage is included?",
@@ -35,7 +35,7 @@ const faqs = [
   },
   {
     q: "Is there a booking fee?",
-    a: "No. TravelX charges nothing on top of the fare or nightly rate — the price on the card is the price at checkout.",
+    a: "No. TravelX charges nothing on top of the fare or nightly rate — the rupee price on the card is the price at checkout.",
   },
 ];
 
