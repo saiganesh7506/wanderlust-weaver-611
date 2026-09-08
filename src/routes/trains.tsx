@@ -9,12 +9,12 @@ export const Route = createFileRoute("/trains")({
       {
         name: "description",
         content:
-          "Book rail across Europe on TravelX. Seat reservations included, advance fares from £39, tickets on your phone.",
+          "Book Indian Railways tickets on TravelX. Seat reservations included, advance fares from ₹480, tickets on your phone.",
       },
       { property: "og:title", content: "Train tickets — TravelX" },
       {
         property: "og:description",
-        content: "Rail across Europe with seat reservations included and advance fares from £39.",
+        content: "Indian rail with seat reservations included and advance fares from ₹480.",
       },
     ],
   }),
@@ -22,10 +22,10 @@ export const Route = createFileRoute("/trains")({
 });
 
 const services = [
-  { route: "STP → PNO", detail: "14 Mar · 2h 16m · direct", operator: "Channel 9024", price: "£58" },
-  { route: "PAR → MRS", detail: "15 Mar · 3h 10m · direct", operator: "Sud Express 6117", price: "£39" },
-  { route: "AMS → BER", detail: "16 Mar · 6h 22m · 1 change", operator: "Nordline 208", price: "£64" },
-  { route: "ZRH → MIL", detail: "17 Mar · 3h 17m · direct", operator: "Alpine 512", price: "£47" },
+  { route: "NDLS → AGC", detail: "14 Mar · 1h 50m · direct", operator: "Vande Bharat 22470", price: "₹560" },
+  { route: "MMCT → ST", detail: "15 Mar · 2h 40m · direct", operator: "Tejas 82902", price: "₹720" },
+  { route: "HWH → NJP", detail: "16 Mar · 7h 25m · direct", operator: "Vande Bharat 22301", price: "₹1,240" },
+  { route: "SBC → MYS", detail: "17 Mar · 2h 05m · direct", operator: "Shatabdi 12007", price: "₹480" },
 ];
 
 function TrainsPage() {

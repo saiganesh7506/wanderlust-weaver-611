@@ -9,7 +9,7 @@ export const Route = createFileRoute("/hotels")({
       {
         name: "description",
         content:
-          "Find hotels, apartments and guesthouses on TravelX. Nightly rates shown up front, free cancellation options, no booking fees.",
+          "Find hotels, homestays and heritage havelis across India on TravelX. Nightly rates shown up front, free cancellation options, no booking fees.",
       },
       { property: "og:title", content: "Hotel search — TravelX" },
       {
@@ -22,10 +22,10 @@ export const Route = createFileRoute("/hotels")({
 });
 
 const stays = [
-  { route: "Casa Alfama, Lisbon", detail: "4★ · 4 nights · breakfast", operator: "Free cancellation", price: "£96/nt" },
-  { route: "Hotel Kanazawa, Kyoto", detail: "4★ · 5 nights · garden view", operator: "Pay at property", price: "£128/nt" },
-  { route: "Vico Marina, Naples", detail: "3★ · 3 nights · sea view", operator: "Free cancellation", price: "£74/nt" },
-  { route: "Caldera Suites, Athens", detail: "5★ · 6 nights · half board", operator: "Non-refundable", price: "£186/nt" },
+  { route: "Backwater House, Kochi", detail: "4★ · 4 nights · breakfast", operator: "Free cancellation", price: "₹1,850/nt" },
+  { route: "Haveli Rangmahal, Jaipur", detail: "4★ · 3 nights · courtyard view", operator: "Pay at property", price: "₹2,640/nt" },
+  { route: "Sands & Palms, Goa", detail: "3★ · 5 nights · sea view", operator: "Free cancellation", price: "₹2,180/nt" },
+  { route: "Lake Terrace, Udaipur", detail: "5★ · 3 nights · half board", operator: "Non-refundable", price: "₹6,900/nt" },
 ];
 
 function HotelsPage() {

@@ -6,6 +6,7 @@ const footerLinks = [
   { to: "/hotels", label: "Hotels" },
   { to: "/trains", label: "Trains" },
   { to: "/packages", label: "Packages" },
+  { to: "/planner", label: "AI Trip Planner" },
   { to: "/deals", label: "Deals" },
   { to: "/support", label: "Support" },
 ] as const;
@@ -22,7 +23,7 @@ export function SiteFooter() {
             </Link>
           ))}
         </div>
-        <p className="font-mono text-[11px] text-inkmuted">© 2026 TravelX · LHR hub</p>
+        <p className="font-mono text-[11px] text-inkmuted">© 2026 TravelX · India travel</p>
       </div>
     </footer>
   );

@@ -22,9 +22,9 @@ export const Route = createFileRoute("/trips")({
 });
 
 const upcoming = [
-  { route: "LHR → HND", detail: "14 Mar · 09:40 · gate B22", operator: "Ref TX-4K19QD", price: "£1,284" },
-  { route: "Casa Alfama, Lisbon", detail: "22 Mar · check-in 15:00", operator: "Ref TX-7P02LM", price: "£384" },
-  { route: "STP → PNO", detail: "05 Apr · 07:01 · coach 12", operator: "Ref TX-1R88AZ", price: "£58" },
+  { route: "DEL → JAI", detail: "14 Mar · 09:40 · gate 2B", operator: "Ref TX-4K19QD", price: "₹2,480" },
+  { route: "Backwater House, Kochi", detail: "22 Mar · check-in 15:00", operator: "Ref TX-7P02LM", price: "₹7,400" },
+  { route: "NDLS → AGC", detail: "05 Apr · 07:01 · coach C4", operator: "Ref TX-1R88AZ", price: "₹560" },
 ];
 
 function TripsPage() {
