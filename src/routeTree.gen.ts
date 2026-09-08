@@ -10,33 +10,73 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as IndexRouteImport } from './routes/index'
+import { Route as FlightsRouteImport } from './routes/flights'
+import { Route as HotelsRouteImport } from './routes/hotels'
+import { Route as PackagesRouteImport } from './routes/packages'
+import { Route as TrainsRouteImport } from './routes/trains'
 
 const IndexRoute = IndexRouteImport.update({
   id: '/',
   path: '/',
   getParentRoute: () => rootRouteImport,
 } as any)
+const FlightsRoute = FlightsRouteImport.update({
+  id: '/flights',
+  path: '/flights',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const HotelsRoute = HotelsRouteImport.update({
+  id: '/hotels',
+  path: '/hotels',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PackagesRoute = PackagesRouteImport.update({
+  id: '/packages',
+  path: '/packages',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const TrainsRoute = TrainsRouteImport.update({
+  id: '/trains',
+  path: '/trains',
+  getParentRoute: () => rootRouteImport,
+} as any)
 
 export interface FileRoutesByFullPath {
   '/': typeof IndexRoute
+  '/flights': typeof FlightsRoute
+  '/hotels': typeof HotelsRoute
+  '/packages': typeof PackagesRoute
+  '/trains': typeof TrainsRoute
 }
 export interface FileRoutesByTo {
   '/': typeof IndexRoute
+  '/flights': typeof FlightsRoute
+  '/hotels': typeof HotelsRoute
+  '/packages': typeof PackagesRoute
+  '/trains': typeof TrainsRoute
 }
 export interface FileRoutesById {
   __root__: typeof rootRouteImport
   '/': typeof IndexRoute
+  '/flights': typeof FlightsRoute
+  '/hotels': typeof HotelsRoute
+  '/packages': typeof PackagesRoute
+  '/trains': typeof TrainsRoute
 }
 export interface FileRouteTypes {
   fileRoutesByFullPath: FileRoutesByFullPath
-  fullPaths: '/'
+  fullPaths: '/' | '/flights' | '/hotels' | '/packages' | '/trains'
   fileRoutesByTo: FileRoutesByTo
-  to: '/'
-  id: '__root__' | '/'
+  to: '/' | '/flights' | '/hotels' | '/packages' | '/trains'
+  id: '__root__' | '/' | '/flights' | '/hotels' | '/packages' | '/trains'
   fileRoutesById: FileRoutesById
 }
 export interface RootRouteChildren {
   IndexRoute: typeof IndexRoute
+  FlightsRoute: typeof FlightsRoute
+  HotelsRoute: typeof HotelsRoute
+  PackagesRoute: typeof PackagesRoute
+  TrainsRoute: typeof TrainsRoute
 }
 
 declare module '@tanstack/react-router' {
@@ -48,11 +88,43 @@ declare module '@tanstack/react-router' {
       preLoaderRoute: typeof IndexRouteImport
       parentRoute: typeof rootRouteImport
     }
+    '/flights': {
+      id: '/flights'
+      path: '/flights'
+      fullPath: '/flights'
+      preLoaderRoute: typeof FlightsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/hotels': {
+      id: '/hotels'
+      path: '/hotels'
+      fullPath: '/hotels'
+      preLoaderRoute: typeof HotelsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/packages': {
+      id: '/packages'
+      path: '/packages'
+      fullPath: '/packages'
+      preLoaderRoute: typeof PackagesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/trains': {
+      id: '/trains'
+      path: '/trains'
+      fullPath: '/trains'
+      preLoaderRoute: typeof TrainsRouteImport
+      parentRoute: typeof rootRouteImport
+    }
   }
 }
 
 const rootRouteChildren: RootRouteChildren = {
   IndexRoute: IndexRoute,
+  FlightsRoute: FlightsRoute,
+  HotelsRoute: HotelsRoute,
+  PackagesRoute: PackagesRoute,
+  TrainsRoute: TrainsRoute,
 }
 export const routeTree = rootRouteImport
   ._addFileChildren(rootRouteChildren)
