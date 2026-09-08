@@ -18,6 +18,20 @@
  * 2. Register it in @theme inline as --color-<name>: var(--<name>)
  */
 
+@theme {
+  --color-paper: hsl(206 22% 96%);
+  --color-ink: hsl(210 18% 13%);
+  --color-inkmuted: hsl(210 12% 44%);
+  --color-accent-brand: hsl(12 82% 58%);
+  --color-accent-ink: hsl(356 62% 42%);
+  --color-line: hsl(210 16% 14% / 0.09);
+  --color-frost: hsl(206 34% 96% / 0.72);
+  --color-frost-deep: hsl(208 32% 91% / 0.62);
+  --font-display: "Space Grotesk", ui-sans-serif, sans-serif;
+  --font-body: "Inter", ui-sans-serif, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, monospace;
+}
+
 @theme inline {
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -62,9 +76,9 @@
 }
 
 :root {
-  --radius: 0.625rem;
-  --background: oklch(1 0 0);
-  --foreground: oklch(0.129 0.042 264.695);
+  --radius: 0.875rem;
+  --background: hsl(206 22% 96%);
+  --foreground: hsl(210 18% 13%);
   --card: oklch(1 0 0);
   --card-foreground: oklch(0.129 0.042 264.695);
   --popover: oklch(1 0 0);
